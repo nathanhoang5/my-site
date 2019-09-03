@@ -10,12 +10,10 @@ class FrontPage extends React.Component {
     return (
       <div className="fp-main">
         <Container>
-          <Main />
+          <Main dm={this.props.dm} toggleDm={this.props.toggleDm} />
           <img src={logo} alt="logo" />
         </Container>
-        <span role="img" aria-label="bridge">
-          🌁
-        </span>
+
         {/* <a href={Pdf} rel="noopener noreferrer" target="_blank">
           <h1>Download Pdf</h1>
         </a> */}

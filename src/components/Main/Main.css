@@ -1,24 +1,63 @@
 .main-view {
   width: 100%;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  padding-top: 3em;
   font-size: 2.5rem;
 }
 
-.example-appear {
-  opacity: 0.01;
+.main-switch {
+  margin-top: 1em;
+  font-size: 1rem;
 }
 
-.example-appear.example-appear-active {
+.main-easter {
+  color: #fff;
+}
+
+.hey-appear {
+  opacity: 0;
+}
+
+.hey-appear.hey-appear-active {
   opacity: 1;
   transition: opacity 1s ease-in;
+}
+
+.maintext-appear {
+  opacity: 0;
+}
+
+.maintext-appear.maintext-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+  transition-delay: 2s;
 }
 
 @media only screen and (max-width: 480px) {
   .main-view {
     font-size: 2rem;
+    padding-top: 0.5em;
+  }
+}
+
+.blinking {
+  animation: blinkingText 3s infinite;
+  animation-delay: 5s;
+}
+@keyframes blinkingText {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
